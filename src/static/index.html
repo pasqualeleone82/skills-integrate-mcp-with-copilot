@@ -13,6 +13,36 @@
     </header>
 
     <main>
+      <section id="auth-container">
+        <h3>Account Access</h3>
+
+        <div id="session-info" class="hidden">
+          <p id="current-user"></p>
+          <button id="logout-btn" type="button">Log Out</button>
+        </div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email:</label>
+            <input
+              type="email"
+              id="login-email"
+              required
+              placeholder="emma@mergington.edu"
+            />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required placeholder="••••••••" />
+          </div>
+          <button type="submit">Log In</button>
+        </form>
+
+        <p class="help-text">
+          Demo users: emma@mergington.edu / student123, leader@mergington.edu / leader123
+        </p>
+      </section>
+
       <section id="activities-container">
         <h3>Available Activities</h3>
         <div id="activities-list">
@@ -21,13 +51,9 @@
         </div>
       </section>
 
-      <section id="signup-container">
+      <section id="signup-container" class="hidden">
         <h3>Sign Up for an Activity</h3>
         <form id="signup-form">
-          <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
             <select id="activity" required>
@@ -37,9 +63,43 @@
           </div>
           <button type="submit">Sign Up</button>
         </form>
-        <div id="message" class="hidden"></div>
+      </section>
+
+      <section id="unregister-container" class="hidden">
+        <h3>Unregister from an Activity</h3>
+        <form id="unregister-form">
+          <div class="form-group">
+            <label for="unregister-activity">Select Activity:</label>
+            <select id="unregister-activity" required>
+              <option value="">-- Select an activity --</option>
+            </select>
+          </div>
+          <button type="submit">Unregister</button>
+        </form>
+      </section>
+
+      <section id="leader-dashboard" class="hidden">
+        <h3>Leader Dashboard</h3>
+        <p class="help-text">Manage participants across all activities.</p>
+        <form id="leader-remove-form">
+          <div class="form-group">
+            <label for="leader-activity">Activity:</label>
+            <select id="leader-activity" required>
+              <option value="">-- Select an activity --</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="leader-participant">Participant:</label>
+            <select id="leader-participant" required>
+              <option value="">-- Select a participant --</option>
+            </select>
+          </div>
+          <button type="submit">Remove Participant</button>
+        </form>
       </section>
     </main>
+
+    <div id="message" class="hidden"></div>
 
     <footer>
       <p>&copy; 2026 Mergington High School</p>

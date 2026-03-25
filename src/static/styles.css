@@ -57,6 +57,24 @@ section h3 {
   color: #1a237e;
 }
 
+.help-text {
+  margin-top: 12px;
+  color: #555;
+  font-size: 14px;
+}
+
+#session-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+#current-user {
+  font-weight: bold;
+}
+
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
@@ -111,18 +129,18 @@ section h3 {
 }
 
 .delete-btn {
-  background: none;
+  background-color: #5c6bc0;
   border: none;
-  color: #c62828;
+  color: #fff;
   cursor: pointer;
-  font-size: 14px;
-  padding: 2px 5px;
+  font-size: 12px;
+  padding: 5px 8px;
   transition: all 0.2s;
   border-radius: 3px;
 }
 
 .delete-btn:hover {
-  background-color: #ffebee;
+  background-color: #3f51b5;
 }
 
 .participants-section p {
@@ -190,6 +208,13 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+#message {
+  max-width: 500px;
+  margin: 20px auto 0;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 footer {
